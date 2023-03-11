@@ -3,7 +3,7 @@ Description=NWAFU Network Login Manager
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/nwafuLogin
+ExecStart=/usr/bin/nwafuLogin YOUR_USERNAME YOUR_PASSWORD
 
 [Install]
 WantedBy=network.target
