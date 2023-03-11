@@ -32,6 +32,16 @@ always_online.py可采用`nohup`命令挂在后台：
 nohup python always_online.py &
 ```
 ---
+# Makefile使用说明
+
+使用本项目的`Makefile`可以由`loginScript.py`构建可执行程序以实现自动登录。同时，在`systemd`文件夹中提供了相关的`service`和`timer`以实现自动运行。
+
+以下是构建步骤：
+
+1. 使用`make confVenv`来构建虚拟环境，之后运行`source ./buildEnv/bin/activate`来激活它
+2. `make buildBinary`会在`dist`文件夹中构建可执行文件
+3. 使用`make install`来安装可执行文件和`systemd`相关任务。别忘了修改相应的`service`文件来修改用户名和密码
+
 # AutoLoad.py使用说明（shrrr提供）
 此脚本独立于登录程序。
 
@@ -39,7 +49,7 @@ nohup python always_online.py &
 
 由于selenium库本质上是一个浏览器自动控制工具，所以本脚本需要预先安装Chrome或Firefox浏览器及其相应的驱动，配置教程可以参考[Windows](https://www.cnblogs.com/xyztank/articles/13457260.html)、[Ubuntu、Mac](https://cloud.tencent.com/developer/article/1514874),也正因如此，脚本虽然修改应用比较简单，但在openwrt最终平台上运行可能会存在一些问题...，大家有什么好的想法也可以继续 ~~ o(*￣▽￣*)ブ
 
-为了降低大家在公共服务器上部署AutoLoad.py文件时泄露账号密码的风险，建议大家在使用时新建tmux窗口运行，输入账号密码确认运行起来以后可以直接kill掉tmux 
+为了降低大家在公共服务器上部署AutoLoad.py文件时泄露账号密码的风险，建议大家在使用时新建tmux窗口运行，输入账号密码确认运行起来以后可以直接kill掉tmux
 
 如需要解除此python文件部署时可以使用以下命令查找任务ID并关闭任务
 
