@@ -1,0 +1,9 @@
+[Unit]
+Description=NWAFU Network Login Manager
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nwafuLogin
+
+[Install]
+WantedBy=network.target
