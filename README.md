@@ -9,7 +9,7 @@ python 3.8
 ```bash
 NWAFU_wifi_login_script
 │  always_online.py // 在线监测脚本，如果监测到掉线则自动重连
-│  AutoLoad.py // 采用selenium库实现的校园网自动登录
+│  AutoLoad.py // 采用selenium库实现的校园网自动登录（一般不必使用，仅展示一种方式）
 │  demo.py // 登录示例脚本
 │  README.md
 │
