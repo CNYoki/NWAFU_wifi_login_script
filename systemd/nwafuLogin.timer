@@ -2,7 +2,8 @@
 Description=NWAFU Network Login Checker
 
 [Timer]
-OnActiveSec=5min
+OnBootSec=5min
+OnUnitActiveSec=5min
 
 Unit=nwafuLogin.service
 
