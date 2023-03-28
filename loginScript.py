@@ -7,7 +7,7 @@ from NWAFU_WIFI_login.LoginManager import LoginManager
 def isConnected(testIp):
     print("Checking connection to {}".format(testIp))
     print("----------------")
-    status = os.system(u"ping {} -w 1".format(testIp))
+    status = os.system(u"ping {} -w 10".format(testIp))
     print("----------------")
     return status == 0
 
